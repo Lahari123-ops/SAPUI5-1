@@ -1,0 +1,38 @@
+<mvc:View controllerName="project1.controller.View3"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+      <VBox class="sapUiSmallMargin">
+
+        <!-- Input Fields -->
+        <Input id="idInput" placeholder="Enter ID"/>
+        <Input id="nameInput" placeholder="Enter Name"/>
+        <Input id="roleInput" placeholder="Enter Role"/>
+
+        <!-- Buttons -->
+        <HBox>
+            <Button text="Create" press="onCreate"/>
+            <Button text="Update" press="onUpdate"/>
+            <Button text="Delete" press="onDelete"/>
+        </HBox>
+
+        <!-- Table -->
+       <Table id="table" items="{/employees}" mode="SingleSelectMaster" selectionChange="onRowSelect">
+            <columns>
+                <Column><Text text="ID"/></Column>
+                <Column><Text text="Name"/></Column>
+                <Column><Text text="Role"/></Column>
+            </columns>
+
+            <items>
+                <ColumnListItem press="onRowSelect">
+                    <cells>
+                        <Text text="{id}"/>
+                        <Text text="{name}"/>
+                        <Text text="{role}"/>
+                    </cells>
+                </ColumnListItem>
+            </items>
+        </Table>
+
+    </VBox>
+</mvc:View>
