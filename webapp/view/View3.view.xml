@@ -7,7 +7,7 @@
         <Input id="idInput" placeholder="Enter ID"/>
         <Input id="nameInput" placeholder="Enter Name"/>
         <Input id="roleInput" placeholder="Enter Role"/>
-
+ 
         <!-- Buttons -->
         <HBox>
             <Button text="Create" press="onCreate"/>
